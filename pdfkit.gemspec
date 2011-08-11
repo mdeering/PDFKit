@@ -19,11 +19,12 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # Developmnet Dependencies
-  s.add_development_dependency(%q<rake>, ["~>0.9.2"])
-  s.add_development_dependency(%q<rspec>, ["~> 2.2.0"])
-  s.add_development_dependency(%q<mocha>, [">= 0.9.10"])
-  s.add_development_dependency(%q<rack-test>, [">= 0.5.6"])
-  s.add_development_dependency(%q<activesupport>, [">= 3.0.8"])
+  # Development Dependencies
+  s.add_development_dependency %q<activesupport>,      [ ">= 3.0.8" ]
+  s.add_development_dependency %q<mocha>,              [ ">= 0.9.10" ]
+  s.add_development_dependency %q<rack-test>,          [ ">= 0.5.6" ]
+  s.add_development_dependency %q<rake>,               [ "~>0.9.2" ]
+  s.add_development_dependency %q<rspec>,              [ "~> 2.2.0" ]
+  s.add_development_dependency %q<wkhtmltopdf-binary>, [ "~>0.9.5.3" ]
 end
 
